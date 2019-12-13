@@ -4,14 +4,14 @@
 
 <!-- MarkdownTOC  autolink="true" levels="1,2" -->
 
-- [Requirements](#requirements)
-- [Customizing wm-config - creating a custom.env file](#customizing-wm-config---creating-a-customenv-file)
-- [Installation](#installation)
-- [Inspecting the services status](#inspecting-the-services-status)
-- [Guides](#guides)
-- [Q&A](#qa)
-- [Contributing](#contributing)
-- [License](#license)
+-   [Requirements](#requirements)
+-   [Customizing wm-config - creating a custom.env file](#customizing-wm-config---creating-a-customenv-file)
+-   [Installation](#installation)
+-   [Inspecting the services status](#inspecting-the-services-status)
+-   [Guides](#guides)
+-   [Q&A](#qa)
+-   [Contributing](#contributing)
+-   [License](#license)
 
 <!-- /MarkdownTOC -->
 
@@ -71,50 +71,46 @@ you allow it to do do.
 
 ## Customizing wm-config - creating a custom.env file
 
-The wm-config utility is highly configurable through a single environment
-file. The environment file is sourced based on the path defined with
+The wm-config utility is highly configurable through a single environment file. The
+environment file is sourced based on the path defined with
 [**WM_CFG_SETTINGS_CUSTOM**][here_settings_custom].
 
-The custom.env file overrides the default values present in the default
-settings file distributed with a given version of the framework.
-You should never change the default values unless you
+The custom.env file overrides the default values present in the default settings file
+distributed with a given version of the framework. You should never change the default values unless you
 know what you are doing.
 
-The environment keys that define the custom file location and store
-the framework version are:
+The environment keys that define the custom file location and store the framework version are:
 
 -   **WM_CFG_VERSION** : Current WM-CONFIG version in use
+
 -   **WM_CFG_SETTINGS_CUSTOM**  : Path to the custom settings file
 
-Besides knowing where the custom settings are loaded from, it is very
-important for you to understand how you can control where
-to publish data and which version of the gateway you are running.
+Besides knowing where the custom settings are loaded from, it is very important for you to
+understand how you can control where to publish data and which version of the gateway you are running.
 
 The keys that allow you to change such behaviour are the following ones:
 
-| **Key**                           | **Description and default value**                                                                            |
-| -------------------------------   | ------------------------------------------------------------------------------------------------------------ |
-| **WM_GW_IMAGE**                   | The name of the WM Gateway Docker image to pull  (*default=wirepas/gateway*)                                 |
-| **WM_GW_VERSION**                 | The build or docker tag to use (*default=latest*)                                                            |
-| *MQTT hostname and credentials*   |                                                                                                              |
-| **WM_SERVICES_MQTT_HOSTNAME**     | A host where to push the gateway data, eg, MQTT broker hostname or ip  (*default=host.extwirepas.com*)       |
-| **WM_SERVICES_MQTT_USERNAME**     | The MQTT username (*default=mqttuser*)                                                                       |
-| **WM_SERVICES_MQTT_PASSWORD**     | The MQTT's username password corresponding (*default=uiaidujfk1897fyeu023849sdh?(*)                          |
-| **WM_SERVICES_MQTT_PORT**         | Defines the MQTT port to use (unsecure 1883, secure 8883) (*default=8883*)                                   |
-| ##WM_SERVICES_ALLOW_UNSECURE      | Must be set to true to allow unsecure connections, eg, to port 1883 (##WM_SERVICES_ALLOW_UNSECURE_DEFAULT)   |
+| **Key**                             | **Description and default value**                                                                      |
+| ----------------------------------- | ------------------------------------------------------------------------------------------------------ |
+| **WM_GW_IMAGE**                     | The name of the WM Gateway Docker image to pull  (_default=wirepas/gateway_)                           |
+| **WM_GW_VERSION**                   | The build or docker tag to use (_default=latest_)                                                      |
+| _MQTT hostname and credentials_     |                                                                                                        |
+| **WM_SERVICES_MQTT_HOSTNAME**       | A host where to push the gateway data, eg, MQTT broker hostname or ip  (_default=host.extwirepas.com_) |
+| **WM_SERVICES_MQTT_USERNAME**       | The MQTT username (_default=mqttuser_)                                                                 |
+| **WM_SERVICES_MQTT_PASSWORD**       | The MQTT's username password corresponding (_default=uiaidujfk1897fyeu023849sdh?(_)                    |
+| **WM_SERVICES_MQTT_PORT**           | Defines the MQTT port to use (unsecure 1883, secure 8883) (_default=8883_)                             |
+| **WM_SERVICES_MQTT_ALLOW_UNSECURE** | Must be set to true to allow unsecure connections, eg, to port 1883 (_default=unset_)                  |
 
-When using a Raspberry Pi, it is useful to set a unique
-hostname to allow easy ssh through the advertised avahi name.
-Besides that, you can also enable and disable password based access as
-well as private public key based access.
+When using a Raspberry Pi, it is useful to set a unique hostname to allow easy ssh through the advertised avahi name.
+Besides that, you can also enable and disable password based access as well as private public key based access.
 
 Here are the keys for such purpose:
 
-| **Key**                               | **Description and default value**                                                          |
-| -----------------------------------   | ------------------------------------------------------------------------------------------ |
-| **WM_HOST_HOSTNAME**                  | Sets the hostname of the host (##WM_HOST_SET_HOSTNAME_DEFAULT)                             |
-| **WM_HOST_USER_PPKI**                 | The public key to authorize in the ssh authorized keys (*default=unset*)                   |
-| **WM_HOST_SSH_ENABLE_PASSWORD_LOGIN** | Enables ssh login using plain text passwords (*default=true*)                              |
+| **Key**                               | **Description and default value**                                        |
+| ------------------------------------- | ------------------------------------------------------------------------ |
+| **WM_HOST_HOSTNAME**                  | Sets the hostname of the host (_default=wm-evk_)                         |
+| **WM_HOST_USER_PPKI**                 | The public key to authorize in the ssh authorized keys (_default=unset_) |
+| **WM_HOST_SSH_ENABLE_PASSWORD_LOGIN** | Enables ssh login using plain text passwords (_default=true_)            |
 
 Please refer to [environment/custom.env][here_environment_custom] for an example on how to define a custom.env file.
 
@@ -171,7 +167,7 @@ setup.sh. The script will extract the files, copy them
 to [WM_CFG_INSTALL_PATH][here_bin_wmconfig] and
 call wm-config.
 
-As an example, let's assume your user is *someuser*
+As an example, let's assume your user is _someuser_
 and the machine where you want to install wm-config
 is known in your network with IP 192.168.1.10.
 
@@ -188,9 +184,9 @@ To copy the files you would type:
 
 :warning:
 
-*To successfully run the commands, set the correct
+_To successfully run the commands, set the correct
 user name and the correct IP or host name for your
-target machine.*
+target machine._
 
 ## Inspecting the services status
 
@@ -216,7 +212,7 @@ With plain docker commands, type:
 
 With docker compose either change
 directory to [WM_CFG_INSTALL_PATH][here_bin_wmconfig]
-or provide the path to the compose file with the *-f* switch :
+or provide the path to the compose file with the _-f_ switch :
 
 ```bash
    docker-compose [ -f $WM_CFG_INSTALL_PATH/lxgw/docker-compose.yml ] ps
@@ -278,8 +274,8 @@ does not fall within any of the framework folders.
 
 Afterwards, you must ensure the removal of:
 
--   wm-config entrypoint (*./local/bin/wm-config or /usr/local/bin/wm-config*)
--   wm-config modules (*~/wirepas/wm-config*)
+-   wm-config entrypoint (_./local/bin/wm-config or /usr/local/bin/wm-config_)
+-   wm-config modules (_~/wirepas/wm-config_)
 
 Doing so requires that you do each of these steps manually or that you call
 wm-config v2.0.0's installation script:
@@ -335,4 +331,3 @@ See [LICENSE][here_license] for the full license text.
 [here_contributing]: https://github.com/wirepas/wm-config/blob/master/CONTRIBUTING.md
 
 [here_license]: https://github.com/wirepas/wm-config/blob/master/LICENSE
-
