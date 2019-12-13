@@ -1,31 +1,31 @@
 # List of settings
 
-The following tables contain the full set of environmental 
+The following tables contain the full set of environmental
 keys used by wm-config:
 
 <!-- MarkdownTOC -->
 
-1.  [Host and dependency management](#host-and-dependency-management)
-2.  [Gateway and data broker settings](#gateway-and-data-broker-settings)
-3.  [Framework feature selection](#framework-feature-selection)
+- [Host and dependency management](#host-and-dependency-management)
+- [Gateway and data broker settings](#gateway-and-data-broker-settings)
+- [Framework feature selection](#framework-feature-selection)
 
 <!-- /MarkdownTOC -->
 
-With the exception of the discovered and static variables, 
-all the variables are found from 
+With the exception of the discovered and static variables,
+all the variables are found from
 the [default settings file][here_environment_default].
 
-Please understand that certain settings might break 
+Please understand that certain settings might break
 the functionality of the services
-and alter the state of your host. 
+and alter the state of your host.
 
-We aim to prevent major issues by reducing 
+We aim to prevent major issues by reducing
 the amount of features enabled
 by default in hosts other than a RPi.
 
 You can control and review which features are enabled
-under your host by looking at the 
-[feature.env file][here_environment_feature]. 
+under your host by looking at the
+[feature.env file][here_environment_feature].
 If you wish to change the default value, please do it
 so under your custom.env file.
 
@@ -158,21 +158,21 @@ The feature keys enable or disable certain functionality of the framework, *rega
 
 | *WM-CONFIG feature*             | *Description*                                                                                                |
 | ------------------------------- | ------------------------------------------------------------------------------------------------------------ |
-| WM_HOST_REBOOT                  | When true, reboot requests will be automatically scheduled                                                   |
-| WM_HOST_CLOCK_MANAGEMENT        | (Requires timesyncd) When true, forces the time daemon to sync                                               |
-| WM_HOST_SYSTEMD_MANAGEMENT      | (Requires systemd) When true, allows systemd jobs to be setup                                                |
-| WM_HOST_BLACKLIST_IPV6          | When true, disables IPv6 on the host                                                                         |
-| WM_HOST_SSH_DAEMON_MANAGEMENT   | When true, allows the framework to customize the ssh daemon settings and authorized keys                     |
-| WM_HOST_AVAHI_DAEMON_MANAGEMENT | (Requires avahi) When true, advertises the ssh service under the avahi daemon                                |
-| WM_HOST_FILESYSTEM_MANAGEMENT   | (Only affects RPi) When true, it will perform file system operations, such as expansion of the volumes       |
-| WM_HOST_HOSTNAME_MANAGEMENT     | When true, the framework will be able to set the hostname of the host                                        |
-| WM_HOST_WIFI_MANAGEMENT         | (Requires wpa suplicant) When true, it will allow the framework to customize the WiFi client                 |
-| WM_HOST_USER_MANAGEMENT         | When true, it will allow the framework to control the user's password                                        |
-| WM_HOST_TTY_MANAGEMENT          | When true, the framework will allows the creation of TTY symlinks                                            |
-| WM_HOST_KEYBOARD_MANAGEMENT     | When true, the framework will be able to tweak the host's keyboard                                           |
-| WM_HOST_SUPPORT_MANAGEMENT      | (Requires systemd) When true, the framework will establish services to connect to a wirepas support endpoint |
-| WM_HOST_DBUS_MANAGEMENT         | When true, the framework will copy the DBUS management files under the host environment                      |
-| WM_HOST_DOCKER_PRUNE_ALL        | When true, the framework will prune any docker images that are not currently being used by any container     |
+| **WM_HOST_REBOOT**                  | When true, reboot requests will be automatically scheduled                                                   |
+| **WM_HOST_CLOCK_MANAGEMENT**        | (Requires timesyncd) When true, forces the time daemon to sync                                               |
+| **WM_HOST_SYSTEMD_MANAGEMENT**      | (Requires systemd) When true, allows systemd jobs to be setup                                                |
+| **WM_HOST_BLACKLIST_IPV6**          | When true, disables IPv6 on the host                                                                         |
+| **WM_HOST_SSH_DAEMON_MANAGEMENT**   | When true, allows the framework to customize the ssh daemon settings and authorized keys                     |
+| **WM_HOST_AVAHI_DAEMON_MANAGEMENT** | (Requires avahi) When true, advertises the ssh service under the avahi daemon                                |
+| **WM_HOST_FILESYSTEM_MANAGEMENT**   | (Only affects RPi) When true, it will perform file system operations, such as expansion of the volumes       |
+| **WM_HOST_HOSTNAME_MANAGEMENT**     | When true, the framework will be able to set the hostname of the host                                        |
+| **WM_HOST_WIFI_MANAGEMENT**         | (Requires wpa suplicant) When true, it will allow the framework to customize the WiFi client                 |
+| **WM_HOST_USER_MANAGEMENT**         | When true, it will allow the framework to control the user's password                                        |
+| **WM_HOST_TTY_MANAGEMENT**          | When true, the framework will allows the creation of TTY symlinks                                            |
+| **WM_HOST_KEYBOARD_MANAGEMENT**     | When true, the framework will be able to tweak the host's keyboard                                           |
+| **WM_HOST_SUPPORT_MANAGEMENT**      | (Requires systemd) When true, the framework will establish services to connect to a wirepas support endpoint |
+| **WM_HOST_DBUS_MANAGEMENT**         | When true, the framework will copy the DBUS management files under the host environment                      |
+| **WM_HOST_DOCKER_PRUNE_ALL**        | When true, the framework will prune any docker images that are not currently being used by any container     |
 
 <!--- bound for deprecation
 

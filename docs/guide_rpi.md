@@ -2,11 +2,11 @@
 
 <!-- MarkdownTOC -->
 
-1.  [Flashing Raspbian](#flashing-raspbian)
-2.  [Creating the custom.env file](#creating-the-customenv-file)
-3.  [Cloning and installing wm-config](#cloning-and-installing-wm-config)
-4.  [Executing wm-config](#executing-wm-config)
-5.  [Disabling password based logins](#disabling-password-based-logins)
+- [Flashing Raspbian](#flashing-raspbian)
+- [Creating the custom.env file](#creating-the-customenv-file)
+- [Cloning and installing wm-config](#cloning-and-installing-wm-config)
+- [Executing wm-config](#executing-wm-config)
+- [Disabling password based logins](#disabling-password-based-logins)
 
 <!-- /MarkdownTOC -->
 
@@ -139,7 +139,7 @@ As an alternative, you can use the installation scripts interactive mode
 to create a minimal configuration file:
 
 ```bash
-   setup.sh --interactive 
+   setup.sh --interactive
 ```
 
 ## Cloning and installing wm-config
@@ -152,7 +152,8 @@ If you have not done it yet, clone the wm-config repository in your
 local machine with:
 
 ```bash
-   git clone https://github.com/wirepas/wm-config.git
+   git clone git@github.com:wirepas/wm-config.git
+   git checkout vX.Y.Z # where X.Y.Z corresponds to the desired release
 ```
 
 Run the packing command as described in the README file:
@@ -182,7 +183,7 @@ The installation of wm-config is now complete.
 
 ## Executing wm-config
 
-Call wm-config (from any directory) to start the 
+Call wm-config (from any directory) to start the
 installation on your RPi:
 
 ```bash
@@ -212,7 +213,7 @@ through it new hostname:
    ssh pi@myrpi.local
 ```
 
-The gateway services should also be up and running. 
+The gateway services should also be up and running.
 
 Through wm-config:
 
