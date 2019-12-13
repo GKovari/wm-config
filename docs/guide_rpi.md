@@ -152,7 +152,7 @@ If you have not done it yet, clone the wm-config repository in your
 local machine with:
 
 ```bash
-   git clone git@github.com:wirepas/wm-config.git
+   git clone https://github.com/wirepas/wm-config.git
 ```
 
 Run the packing command as described in the README file:
