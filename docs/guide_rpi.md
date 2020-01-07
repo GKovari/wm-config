@@ -149,8 +149,8 @@ same steps as outlined in the main README file. We opt to *build an archive
 instead of cloning the repository within the RPi*. 
 
 > The reason behind making an archive is to speed up installation towards multiple RPis. 
-> If you wish to clone the repository on your RPI, please install ensure that git
-> is installed and skip the clone and packing instructions.
+> If you wish to clone the repository on your RPI, please ensure that git
+> is installed, skip packing instructions and clone directly onto the RPi.
 
 If you have not done it yet, clone the wm-config repository in your
 local machine with:
