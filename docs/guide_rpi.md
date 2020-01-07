@@ -145,15 +145,20 @@ to create a minimal configuration file:
 ## Cloning and installing wm-config
 
 Now we will move on to the framework installation. We will follow the
-same steps as outlined in the main README file. We opt to build an archive
-instead of cloning the repository within the RPi.
+same steps as outlined in the main README file. We opt to *build an archive
+instead of cloning the repository within the RPi*. 
+
+> The reason behind making an archive is to speed up installation towards multiple RPis. 
+> If you wish to clone the repository on your RPI, please install ensure that git
+> is installed and skip the clone and packing instructions.
 
 If you have not done it yet, clone the wm-config repository in your
 local machine with:
 
 ```bash
-   git clone git@github.com:wirepas/wm-config.git
-   git checkout vX.Y.Z # where X.Y.Z corresponds to the desired release
+   git clone https://github.com/wirepas/wm-config.git
+   cd wm-config
+   git checkout vX.Y.Z # where X.Y.Z corresponds to the desired wm-config release
 ```
 
 Run the packing command as described in the README file:
