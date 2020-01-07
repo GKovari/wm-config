@@ -156,8 +156,8 @@ If you have not done it yet, clone the wm-config repository in your
 local machine with:
 
 ```bash
-   git clone https://github.com/wirepas/wm-config.git
-   cd wm-config
+   git clone https://github.com/wirepas/wm-config.git ~/wm-config
+   cd ~/wm-config
    git checkout vX.Y.Z # where X.Y.Z corresponds to the desired wm-config release
 ```
 
